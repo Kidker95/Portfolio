@@ -2,7 +2,6 @@
 
 A Windows 98-inspired portfolio showcasing my projects, skills, and contact information in a retro desktop environment.
 
-![Portfolio Screenshot](path-to-screenshot.png) <!-- Add a screenshot image path -->
 
 ## Features
 - **Projects Folder:** Explore my projects with retro-style folder navigation.
@@ -16,10 +15,3 @@ A Windows 98-inspired portfolio showcasing my projects, skills, and contact info
 - **Frontend:** React, TypeScript
 - **Styling:** CSS (Retro Windows 98 aesthetic)
 - **Deployment:** GitHub Pages
-
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Kidker95/Portfolio.git
-
-   ```
