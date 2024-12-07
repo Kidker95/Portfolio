@@ -1,0 +1,11 @@
+.desktop-icon a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent (black in this case) */
+}
+
+.desktop-icon p {
+    margin: 5px 0 0; /* Adjust spacing */
+    font-size: 12px; /* Adjust font size */
+    line-height: 1.2; /* Adjust line height */
+    color: black; /* Explicitly set text color to black */
+}

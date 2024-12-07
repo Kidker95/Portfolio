@@ -1,0 +1,21 @@
+.Header h1 {
+    margin-bottom: 0;
+    font-family:  monospace;
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.rotating-text {
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    animation: rotateText 5s infinite linear;
+    transform-style: preserve-3d;
+}

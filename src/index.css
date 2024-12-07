@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #008080; 
+    font-family: "MS Sans Serif", Tahoma, sans-serif; 
+    color: black; 
+    text-align: center;
+  }
+
+  button {
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 12px;
+    color: black;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:active {
+    box-shadow: inset 2px 2px 0px #000, inset -2px -2px 0px #fff;
+  }
+  
+ 
+  .sidebar-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .sidebar-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .sidebar-icon:hover {
+    text-decoration: underline;
+  }
+  
+  .desktop-icon {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    width: 80px;
+    height: 100px; 
+    margin: 10px; 
+    cursor: pointer; 
+}
+
+.desktop-icon img {
+    width: 50px; 
+    height: 50px; 
+}
+
+.desktop-icon p {
+    margin: 5px 0 0; 
+    font-size: 12px;
+    line-height: 1.2;
+}

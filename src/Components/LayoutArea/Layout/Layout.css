@@ -1,0 +1,19 @@
+.Layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+header {
+    grid-row: 1 / 2;
+}
+
+main {
+    grid-row: 2 / 3;
+    overflow-y: auto; /* Allows scrolling within the Routing area */
+}
+
+aside {
+    grid-row: 3 / 4;
+}
