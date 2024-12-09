@@ -1,38 +1,60 @@
 import { useDispatch } from "react-redux";
-import { closePopup } from "../../../Redux/PopupSlice";
-import { Link } from "../../DesktopArea/Link/Link";
 import aboutMePhoto from "../../../Assets/Images/AboutMe.jpg";
 import warningIcon from "../../../Assets/Images/win98Icons/warning.jpeg";
+import { LinkModel } from "../../../Models/LinkModel";
+import { closePopup } from "../../../Redux/PopupSlice";
+import { Link } from "../../DesktopArea/Link/Link";
 import "./Popup.css";
+import { PhotoModel } from "../../../Models/PhotoModel";
+import { Photo } from "../../DesktopArea/Photo/Photo";
 
 interface PopupProps {
+    photo?: PhotoModel;
     title: string;
     contentKey: string;
-    isErrorPopUp?: boolean;
+    src?: string;
+    content?: {
+        links?: LinkModel[];
+        photos?: PhotoModel[];
+    };
 }
 
-export function Popup({ title, contentKey}: PopupProps): JSX.Element {
+export function Popup({ title, contentKey, content, photo, src }: PopupProps): JSX.Element {
     const dispatch = useDispatch();
-
-    const PortfolioLinks = [
-        { url: "https://kidker95.github.io/tic-tac-toe/", siteName: "React - Tic Tac Toe" },
-        { url: "https://kidker95.github.io/The-ToolBox/", siteName: "Native HTML - The Toolbox" },
-        { url: "https://kidker95.github.io/Crypto-Info/", siteName: "Crypto Info" },
-        { url: "https://www.npmjs.com/package/get-random-color-by-kidker", siteName: "NPM - Get Random Color" },
-        { url: "https://www.npmjs.com/package/color-converter-by-kidker", siteName: "NPM - Color Converter" },
-        { url: "https://github.com/Kidker95/404-prank-chrome-extentions", siteName: "Github - 404 Prank Chrome Extension" },
-    ];
 
     const renderContent = () => {
         switch (contentKey) {
-            case "projects":
+            case "folder":
                 return (
-                    <div className="projects-popup">
-                        <div className="projects-list">
-                            <Link links={PortfolioLinks} />
-                        </div>
+                    <div className="folder-popup-content">
+                        {/* Render Links */}
+                        {content?.links && (
+                            <div className="links-section">
+                                <Link links={content.links} />
+                            </div>
+                        )}
+
+                        {/* Render Photos */}
+                        {content?.photos && (
+                            <div className="photos-section">
+                                {content.photos.map((photo, index) => (
+                                    <Photo key={index} photo={photo} />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 );
+                case "photo":
+                    console.log("Rendering photo with source:", photo?.source); // Debugging
+                    if (!photo) return <p>Photo not found</p>;
+                    
+                    return (
+                        <div className="media-popup-content">
+                            <img src={photo.source} alt={photo.title} className="popup-media" />
+                        </div>
+                    );
+                
+
 
             case "explorerError":
                 return (
@@ -41,56 +63,50 @@ export function Popup({ title, contentKey}: PopupProps): JSX.Element {
                         <p>Internet Explorer crashed. Try again later.</p>
                     </div>
                 );
-
             case "aboutMe":
                 return (
                     <div className="about-me-popup">
                         <img src={aboutMePhoto} alt="Omri Shachar" className="about-me-image" />
                         <p>Hi, I’m Omri! I’m a full-stack developer passionate about building clean and functional applications.</p>
                         <div className="scrollable-skills">
-                        <h3>Skills:</h3>
-                        <ul>
-                        <li>&#x2713;Databases: MongoDB, SQL</li>
-                        <li>&#x2713;Frontend: React, Angular</li>
-                        <li>&#x2713;Backend: Node.js</li>
-                        <li>&#x2713;Languages: JavaScript, TypeScript, HTML, CSS, Regex</li>
-                        <li>&#x2713;Version Control: Git, GitHub</li>
-                        <li>&#x2713;Frameworks: Express.js</li>
-                        <li>&#x2713;Testing: Mocha, Cypress</li>
-                        <li>&#x2713;Performance Optimization: Lazy Loading</li>
-                        <li>&#x2713;Cloud & Hosting: Firebase, AWS, Azure</li>
-                        <li>&#x2713;State Management: Redux, Context API</li>
-                        <li>&#x2713;UI/UX: Tailwind CSS, Material UI</li>
-                        <li>&#x2713;Security: JWT, CORS</li>
-                        <li>&#x2713;DevOps & Tools: Docker</li>
-                        <li>&#x2713;API & Web Services: Postman, RESTful APIs</li>
-                        </ul>
+                            <h3>Skills:</h3>
+                            <ul>
+                                <li>&#x2713; Databases: MongoDB, SQL</li>
+                                <li>&#x2713; Frontend: React, Angular</li>
+                                <li>&#x2713; Backend: Node.js</li>
+                                <li> &#x2713; Languages: JavaScript, TypeScript,HTML, CSS, Regex</li>
+                                <li>&#x2713; Version Control: Git, GitHub</li>
+                                <li>&#x2713; Frameworks: Express.js</li>
+                                <li>&#x2713; Testing: Mocha, Cypress</li>
+                                <li>&#x2713; Performance Optimization: Lazy Loading</li>
+                                <li>&#x2713; Cloud & Hosting: Firebase, AWS</li>
+                                <li>&#x2713; State Management: Redux, Context API</li>
+                                <li>&#x2713; UI/UX: Tailwind CSS, Material UI</li>
+                                <li>&#x2713; Security: JWT, CORS</li>
+                                <li>&#x2713; DevOps & Tools: Docker</li>
+                                <li>&#x2713; API & Web Services: Postman, RESTful APIs</li>
+                            </ul>
                         </div>
                         <p><strong>Double click on resumé below the Recycle Bin</strong></p>
                     </div>
                 );
-
             case "terminal":
                 return (
                     <div className="terminal-popup">
-                        <p>C:/Omris_Portfolio/ &gt;&gt; <span className="flickering-cursor">_</span></p>
-                        
+                        <p>C:/Omris_Portfolio/ &gt;&gt;{" "}<span className="flickering-cursor">_</span></p>
                     </div>
                 );
-
             default:
                 return <p>No content available</p>;
         }
     };
 
     const handleClose = () => {
-        dispatch(closePopup(title)); 
+        dispatch(closePopup(title));
     };
 
     return (
-        <div
-            className={`popup ${contentKey === "terminal" ? "terminal-popup-wrapper" : ""} ${contentKey === "aboutMe" ? "about-me-wrapper" : ""} ${contentKey === "projects" ? "projects-wrapper" : ""} ${contentKey === "explorerError" ? "explorer-error-wrapper" : ""}`}
-        >
+        <div className={`popup ${contentKey}-wrapper`}>
             <div className="popup-header">
                 <span>{title}</span>
                 <button className="close-btn" onClick={handleClose}>✕</button>
@@ -98,5 +114,4 @@ export function Popup({ title, contentKey}: PopupProps): JSX.Element {
             <div className="popup-content">{renderContent()}</div>
         </div>
     );
-    
 }

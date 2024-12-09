@@ -55,10 +55,12 @@
 .explorer-error-popup {
     padding: 20px;
     font-size: 14px;
+    background-color:#c3c3c3;
 }
 
 /* For the About Me Popup */
 .about-me-popup {
+    background-color: white;
     padding: 20px;
     color: #333;
     font-size: 16px;
@@ -80,7 +82,8 @@
 
 /* For the Terminal Popup */
 .terminal-popup {
-    color: #00ff00; /* Neon green text */
+    color: #00ff00;
+    background-color: black;
     width: 400px;
     height: 300px;
     font-family: 'Courier New', monospace;
@@ -105,7 +108,6 @@
 }
 
 .popup-content {
-    padding: 7px;
     padding-top:0;
     display: flex;
     gap: 12px;
@@ -135,6 +137,29 @@
     animation: flicker 1s step-end infinite;
 }
 
+/* For the Media Popup */
+.media-popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    max-height: 80vh;
+    max-width: 85vw;
+    overflow: auto;
+    box-shadow: 1px 1px 0 #000;
+    overflow: hidden;
+}
+
+.popup-media {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 2px 2px 0 #424242;
+    
+}
+
+
 @keyframes flicker {
     0%, 50% {
         opacity: 1;
@@ -142,4 +167,38 @@
     51%, 100% {
         opacity: 0;
     }
+}
+
+/* Folder Popup Styling */
+.folder-popup-content {
+    background-color: #ffffff; /* White background */
+    padding: 10px; /* Add padding */
+    border: 1px solid #c0c0c0; /* Border like Win98 */
+    max-height: 80vh; /* Limit height */
+    max-width: 80vw; /* Limit width */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Avoid horizontal scrolling */
+    display: flex;
+    flex-wrap: wrap; /* Make items wrap */
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+
+.media-popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-height: 80vh;
+    max-width: 85vw;
+    overflow: hidden;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.popup-media {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 1px solid #ccc;
 }

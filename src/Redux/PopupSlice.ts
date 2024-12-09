@@ -19,10 +19,13 @@ export const popupSlice = createSlice({
             state.activePopups.push(action.payload);
         },
         closePopup: (state, action: PayloadAction<string>) => {
-            state.activePopups = state.activePopups.filter((popup) => popup.title !== action.payload);
+            state.activePopups = state.activePopups.filter(
+                (popup) => popup.title !== action.payload
+            );
         },
     },
 });
+
 
 export const { openPopup, closePopup } = popupSlice.actions;
 export default popupSlice.reducer;

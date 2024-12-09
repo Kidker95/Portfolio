@@ -1,0 +1,153 @@
+[
+    {
+        "title": "NPM's",
+        "links": [
+            {
+                "url": "https://www.npmjs.com/package/get-random-color-by-kidker",
+                "siteName": "Get Random Color"
+            },
+            {
+                "url": "https://www.npmjs.com/package/color-converter-by-kidker",
+                "siteName": "Color Converter"
+            }
+        ],
+        "photos": []
+    },
+    {
+        "title": "Plain HTML - To Do List",
+        "links": [
+            {
+                "url": "https://kidker95.github.io/To-Do-List-Notes/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/todo-notes.jpeg",
+                "title": "Screenshot"
+            }
+        ]
+    },
+    {
+        "title": "Plain HTML - The Toolbox",
+        "links": [
+            {
+                "url": "https://kidker95.github.io/The-ToolBox/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/toolbox.jpeg",
+                "title": "Screenshot"
+            }
+        ]
+    },
+    {
+        "title": "React - Tic Tac Toe",
+        "links": [
+            {
+                "url": "https://kidker95.github.io/tic-tac-toe/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/tic-tac-toe-1.jpeg",
+                "title": "Screenshot 1"
+            },
+            {
+                "source": "Assets/Images/tic-tac-toe-2.jpeg",
+                "title": "Screenshot 2"
+            }
+        ]
+    },
+    {
+        "title": "Plasmo - 404 Prank",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/404-prank-chrome-extentions/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/404prank.jpeg",
+                "title": "Screenshot"
+            }
+        ]
+    },
+    {
+        "title": "Full Stack - Pennywise",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/pennywise/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/pennywise-1.jpeg",
+                "title": "Screenshot 1"
+            },
+            {
+                "source": "Assets/Images/pennywise-2.jpeg",
+                "title": "Screenshot 2"
+            },
+            {
+                "source": "Assets/Images/pennywise-3.jpeg",
+                "title": "Screenshot 3"
+            },
+            {
+                "source": "Assets/Images/pennywise-4.jpeg",
+                "title": "Screenshot 4"
+            }
+        ]
+    },
+    {
+        "title": "Full Stack - Traveloo",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/traveloo/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/traveloo-1.jpeg",
+                "title": "Screenshot 1"
+            },
+            {
+                "source": "Assets/Images/traveloo-2.jpeg",
+                "title": "Screenshot 2"
+            },
+            {
+                "source": "Assets/Images/traveloo-3.jpeg",
+                "title": "Screenshot 3"
+            },
+            {
+                "source": "Assets/Images/traveloo-4.jpeg",
+                "title": "Screenshot 4"
+            }
+        ]
+    },
+    {
+        "title": "React & GPT - Skater AI",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/skater-ai",
+                "siteName": "NPM"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/skater-ai-1.jpeg",
+                "title": "Screenshot 1"
+            },
+            {
+                "source": "Assets/Images/skater-ai-2.jpeg",
+                "title": "Screenshot 2"
+            }
+        ]
+    }
+]

@@ -11,7 +11,6 @@ export function AboutMe(): JSX.Element {
             openPopup({
                 title: "About Me.exe",
                 contentKey: "aboutMe",
-                isErrorPopUp: false,
             })
         );
     };

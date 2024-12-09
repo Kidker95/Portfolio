@@ -1,8 +1,9 @@
 import "./Link.css";
 import linkIcon from "../../../Assets/Images/win98Icons/link.jpeg";
+import { LinkModel } from "../../../Models/LinkModel";
 
 interface LinkProps {
-    links: { url: string; siteName: string }[]; 
+    links: LinkModel[]; 
 }
 
 export function Link({ links }: LinkProps): JSX.Element {
