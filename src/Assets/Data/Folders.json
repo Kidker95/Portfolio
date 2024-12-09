@@ -11,7 +11,8 @@
                 "siteName": "Color Converter"
             }
         ],
-        "photos": []
+        "photos": [],
+        "videos": []
     },
     {
         "title": "Plain HTML - To Do List",
@@ -26,7 +27,8 @@
                 "source": "Assets/Images/todo-notes.jpeg",
                 "title": "Screenshot"
             }
-        ]
+        ],
+        "videos": []
     },
     {
         "title": "Plain HTML - The Toolbox",
@@ -41,7 +43,8 @@
                 "source": "Assets/Images/toolbox.jpeg",
                 "title": "Screenshot"
             }
-        ]
+        ],
+        "videos": []
     },
     {
         "title": "React - Tic Tac Toe",
@@ -53,12 +56,18 @@
         ],
         "photos": [
             {
-                "source": "Assets/Images/tic-tac-toe-1.jpeg",
+                "source": "Assets/Images/tic-tac-toe-1.jpg",
                 "title": "Screenshot 1"
             },
             {
-                "source": "Assets/Images/tic-tac-toe-2.jpeg",
+                "source": "Assets/Images/tic-tac-toe-2.jpg",
                 "title": "Screenshot 2"
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/tic-tac-toe.mp4",
+                "name": "Video Demo"
             }
         ]
     },
@@ -75,7 +84,8 @@
                 "source": "Assets/Images/404prank.jpeg",
                 "title": "Screenshot"
             }
-        ]
+        ],
+        "videos": []
     },
     {
         "title": "Full Stack - Pennywise",
@@ -101,6 +111,12 @@
             {
                 "source": "Assets/Images/pennywise-4.jpeg",
                 "title": "Screenshot 4"
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/pennywise.mp4",
+                "name": "Video Demo"
             }
         ]
     },
@@ -129,6 +145,16 @@
                 "source": "Assets/Images/traveloo-4.jpeg",
                 "title": "Screenshot 4"
             }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/traveloo-admin.mp4",
+                "name": "Admin Video Demo"
+            },
+            {
+                "source": "Assets/Videos/traveloo-user.mp4",
+                "name": "User Video Demo"
+            }
         ]
     },
     {
@@ -147,6 +173,12 @@
             {
                 "source": "Assets/Images/skater-ai-2.jpeg",
                 "title": "Screenshot 2"
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/skater-ai.mp4",
+                "name": "Video Demo"
             }
         ]
     }

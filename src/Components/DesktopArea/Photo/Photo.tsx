@@ -12,13 +12,13 @@ export function Photo({ photo }: PhotoProps): JSX.Element {
     const dispatch = useDispatch();
 
     const handleDoubleClick = () => {
-        console.log("11111Photo source:", photo.source); // Debug here
+        console.log("Photo source:", photo.source); // Debug here
         dispatch(
             openPopup({
                 title: photo.title,
                 contentKey: "photo",
                 src: photo.source,
-                photo: photo, // Add the full photo object here
+                photo: photo,
             })
         );
     };

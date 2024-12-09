@@ -7,12 +7,10 @@ import { EmailMe } from "../../DesktopArea/EmailMe/EmailMe";
 import { Folder } from "../../DesktopArea/Folder/Folder";
 import { InternetExplorer } from "../../DesktopArea/InternetExplorer/InternetExplorer";
 import { Link } from "../../DesktopArea/Link/Link";
-import { Photo } from "../../DesktopArea/Photo/Photo";
 import { RecycleBin } from "../../DesktopArea/RecycleBin/RecycleBin";
 import { Terminal } from "../../DesktopArea/Terminal/Terminal";
 import { Popup } from "../../LayoutArea/Popup/Popup";
 import "./Home.css";
-import img from "../../../Assets/Images/screenshots/toolbox.jpeg"
 
 
 export function Home(): JSX.Element {
@@ -34,7 +32,6 @@ export function Home(): JSX.Element {
             <InternetExplorer />
             <AboutMe />
             <Terminal />
-            <Photo photo={{ source: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", title: "Photo From URL" }} />
 
             {/* Render Folders */}
             {foldersData.map((folder, index) => (

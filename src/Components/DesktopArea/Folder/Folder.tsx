@@ -19,6 +19,7 @@ export function Folder({ folder }: FolderProps): JSX.Element {
                 content: { // Pass links and photos separately
                     links: folder.links,
                     photos: folder.photos,
+                    videos: folder.videos,
                 },
             })
         );

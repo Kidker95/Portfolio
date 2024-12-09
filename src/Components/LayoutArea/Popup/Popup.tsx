@@ -7,6 +7,8 @@ import { Link } from "../../DesktopArea/Link/Link";
 import "./Popup.css";
 import { PhotoModel } from "../../../Models/PhotoModel";
 import { Photo } from "../../DesktopArea/Photo/Photo";
+import { Video } from "../../DesktopArea/Video/Video";
+import { VideoModel } from "../../../Models/VideoModel";
 
 interface PopupProps {
     photo?: PhotoModel;
@@ -16,6 +18,7 @@ interface PopupProps {
     content?: {
         links?: LinkModel[];
         photos?: PhotoModel[];
+        videos?: VideoModel[];
     };
 }
 
@@ -24,36 +27,55 @@ export function Popup({ title, contentKey, content, photo, src }: PopupProps): J
 
     const renderContent = () => {
         switch (contentKey) {
-            case "folder":
+            case "video":
+                if (!photo && !src) return <p>Video not found</p>;
                 return (
-                    <div className="folder-popup-content">
-                        {/* Render Links */}
-                        {content?.links && (
-                            <div className="links-section">
-                                <Link links={content.links} />
-                            </div>
-                        )}
-
-                        {/* Render Photos */}
-                        {content?.photos && (
-                            <div className="photos-section">
-                                {content.photos.map((photo, index) => (
-                                    <Photo key={index} photo={photo} />
-                                ))}
-                            </div>
-                        )}
+                    <div className="media-popup-content">
+                        <video
+                            className="popup-media video-player" src={src} controls preload="metadata">Your browser does not support the video tag.</video>
                     </div>
                 );
-                case "photo":
-                    console.log("Rendering photo with source:", photo?.source); // Debugging
-                    if (!photo) return <p>Photo not found</p>;
-                    
+                case "folder":
+                    console.log("Videos array:", content?.videos);
                     return (
-                        <div className="media-popup-content">
-                            <img src={photo.source} alt={photo.title} className="popup-media" />
+                        <div className="folder-popup-content">
+                            {/* Render Links */}
+                            {content?.links && (
+                                <div className="links-section">
+                                    <Link links={content.links} />
+                                </div>
+                            )}
+                
+                            {/* Render Photos */}
+                            {content?.photos && (
+                                <div className="photos-section">
+                                    {content.photos.map((photo, index) => (
+                                        <Photo key={index} photo={photo} />
+                                    ))}
+                                </div>
+                            )}
+                
+                            {/* Render Videos */}
+                            {content?.videos && (
+                                <div className="videos-section">
+                                    {content.videos.map((video, index) => (
+                                        <Video key={index} video={video} />
+                                    ))}
+                                </div>
+                            )}
                         </div>
                     );
                 
+            case "photo":
+                console.log("Rendering photo with source:", photo?.source); // Debugging
+                if (!photo) return <p>Photo not found</p>;
+
+                return (
+                    <div className="media-popup-content">
+                        <img src={photo.source} alt={photo.title} className="popup-media" />
+                    </div>
+                );
+
 
 
             case "explorerError":
