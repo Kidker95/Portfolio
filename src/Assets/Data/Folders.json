@@ -88,10 +88,77 @@
         "videos": []
     },
     {
+        "title": "React & GPT - Skater AI",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/skater-ai",
+                "siteName": "NPM"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/skater-ai-1.jpeg",
+                "title": "Screenshot 1"
+            },
+            {
+                "source": "Assets/Images/skater-ai-2.jpeg",
+                "title": "Screenshot 2"
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/skater-ai.mp4",
+                "name": "Video Demo"
+            }
+        ]
+    },
+    {
+        "title": "React & GPT - Text To Image",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/text-to-image-ai",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/text-to-image-ai.jpg",
+                "title": "Screenshot"
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/text-to-image-ai.mp4",
+                "name": "Video Demo"
+            }
+        ]
+    },
+    {
+        "title": "React - Simon",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/simon-says",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/simon.jpg",
+                "title": "Screenshot"
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/simon.mp4",
+                "name": "Video Demo"
+            }
+        ]
+    },
+    {
         "title": "Full Stack - Pennywise",
         "links": [
             {
-                "url": "https://github.com/Kidker95/pennywise/",
+                "url": "https://github.com/Kidker95/pennywise",
                 "siteName": "Github"
             }
         ],
@@ -124,7 +191,7 @@
         "title": "Full Stack - Traveloo",
         "links": [
             {
-                "url": "https://github.com/Kidker95/traveloo/",
+                "url": "https://github.com/Kidker95/traveloo",
                 "siteName": "Github"
             }
         ],
@@ -154,31 +221,6 @@
             {
                 "source": "Assets/Videos/traveloo-user.mp4",
                 "name": "User Video Demo"
-            }
-        ]
-    },
-    {
-        "title": "React & GPT - Skater AI",
-        "links": [
-            {
-                "url": "https://github.com/Kidker95/skater-ai",
-                "siteName": "NPM"
-            }
-        ],
-        "photos": [
-            {
-                "source": "Assets/Images/skater-ai-1.jpeg",
-                "title": "Screenshot 1"
-            },
-            {
-                "source": "Assets/Images/skater-ai-2.jpeg",
-                "title": "Screenshot 2"
-            }
-        ],
-        "videos": [
-            {
-                "source": "Assets/Videos/skater-ai.mp4",
-                "name": "Video Demo"
             }
         ]
     }
