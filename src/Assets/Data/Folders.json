@@ -93,6 +93,10 @@
             {
                 "url": "https://github.com/Kidker95/skater-ai",
                 "siteName": "NPM"
+            },
+            {
+                "url": "https://skater-ai.web.app/home",
+                "siteName": "Firebase Live Demo"
             }
         ],
         "photos": [
@@ -118,6 +122,10 @@
             {
                 "url": "https://github.com/Kidker95/text-to-image-ai",
                 "siteName": "Github"
+            },
+            {
+                "url": "https://simple-text-to-image-bot.web.app/home",
+                "siteName": "Firebase Live Demo"
             }
         ],
         "photos": [
@@ -139,6 +147,10 @@
             {
                 "url": "https://github.com/Kidker95/simon-says",
                 "siteName": "Github"
+            },
+            {
+                "url": "https://simon-says-by-omri.web.app/",
+                "siteName": "Firebase Live Demo"
             }
         ],
         "photos": [
@@ -221,6 +233,27 @@
             {
                 "source": "Assets/Videos/traveloo-user.mp4",
                 "name": "User Video Demo"
+            }
+        ]
+    },
+    {
+        "title": "Full Stack - Amazon Book Scraper",
+        "links": [
+            {
+                "url": "https://github.com/Kidker95/amazon-book-scraper/",
+                "siteName": "Github"
+            }
+        ],
+        "photos": [
+            {
+                "source": "Assets/Images/amazon-book-scraper.jpeg",
+                "title": "Screenshot "
+            }
+        ],
+        "videos": [
+            {
+                "source": "Assets/Videos/amazon-book-scrapper.mp4",
+                "name": "Video Demo"
             }
         ]
     }
